@@ -43,9 +43,10 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* LEFT SIDE */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}            
             className="space-y-6"
           >
             <p className="text-muted-foreground">
@@ -94,9 +95,10 @@ const ContactSection = () => {
 
           {/* FORM */}
           <motion.form
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             onSubmit={handleSubmit}
             className="glass p-6 md:p-8 space-y-5"
           >

@@ -7,21 +7,29 @@ const experiences = [
     role: "Software Engineer (MERN Stack)",
     company: "CodeDev System",
     period: "Current",
-    description: "Working on full-stack MERN applications. Building scalable and efficient web solutions.",
+    description:
+      "Working on full-stack MERN applications. Building scalable and efficient web solutions.",
     highlights: ["React.js", "Node.js", "Express.js", "MongoDB"],
   },
   {
     role: "Frontend Engineer (React.js)",
     company: "NextBridge System, Lahore, Pakistan",
     period: "May '25 — Feb '26",
-    description: "Built responsive and user-friendly web interfaces using React and Tailwind CSS. Converted UI mockups into reusable components. Ensured smooth interactions and consistent styling across devices.",
-    highlights: ["React.js", "Tailwind CSS", "UI Components", "Responsive Design"],
+    description:
+      "Built responsive and user-friendly web interfaces using React and Tailwind CSS. Converted UI mockups into reusable components. Ensured smooth interactions and consistent styling across devices.",
+    highlights: [
+      "React.js",
+      "Tailwind CSS",
+      "UI Components",
+      "Responsive Design",
+    ],
   },
   {
     role: "React.Js Developer Intern",
     company: "Catalyic Security, Lahore",
     period: "Nov '24 — Apr '25",
-    description: "Developed responsive React applications enhancing user engagement and interface performance. Collaborated with senior developers to improve code quality and best practices.",
+    description:
+      "Developed responsive React applications enhancing user engagement and interface performance. Collaborated with senior developers to improve code quality and best practices.",
     highlights: ["React.js", "TypeScript", "UI/UX", "Agile"],
   },
 ];
@@ -35,10 +43,9 @@ const ExperienceSection = () => (
         {experiences.map((exp, i) => (
           <motion.div
             key={i}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className={`relative pl-12 md:pl-0 mb-12 ${
               i % 2 === 0 ? "md:pr-[55%]" : "md:pl-[55%]"
@@ -52,10 +59,15 @@ const ExperienceSection = () => (
               </div>
               <h3 className="text-xl font-bold text-foreground">{exp.role}</h3>
               <p className="text-primary/80 font-medium">{exp.company}</p>
-              <p className="text-muted-foreground text-sm mt-3">{exp.description}</p>
+              <p className="text-muted-foreground text-sm mt-3">
+                {exp.description}
+              </p>
               <div className="flex flex-wrap gap-2 mt-4">
                 {exp.highlights.map((h) => (
-                  <span key={h} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                  <span
+                    key={h}
+                    className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
+                  >
                     {h}
                   </span>
                 ))}

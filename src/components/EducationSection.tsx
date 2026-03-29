@@ -25,19 +25,23 @@ const EducationSection = () => (
         {items.map((item, i) => (
           <motion.div
             key={item.title}
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.15 }}
+            transition={{ duration: 0.6 }}
             className="glass p-6 md:p-8 flex items-start gap-5 hover:glow-blue transition-all duration-300"
           >
             <div className="p-3 rounded-lg bg-primary/10 text-primary shrink-0">
               <item.icon size={24} />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+              <h3 className="text-lg font-bold text-foreground">
+                {item.title}
+              </h3>
               <p className="text-primary/80 font-medium">{item.institution}</p>
-              <p className="text-muted-foreground text-sm mt-1 font-mono-code">{item.period}</p>
+              <p className="text-muted-foreground text-sm mt-1 font-mono-code">
+                {item.period}
+              </p>
             </div>
           </motion.div>
         ))}
