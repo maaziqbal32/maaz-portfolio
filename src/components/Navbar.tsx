@@ -60,7 +60,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="/Maaz_Iqbal_CV.pdf"
+            href="/maaz-cv.pdf"
             download
             className="flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:shadow-md"
           >

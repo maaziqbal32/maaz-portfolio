@@ -6,7 +6,10 @@ import { Download, ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       <HeroScene />
       <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/60 to-background z-[1]" />
 
@@ -17,7 +20,9 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex-1 text-center md:text-left"
         >
-          <p className="text-primary font-mono-code text-sm mb-4 tracking-wider">{'<Hello World />'}</p>
+          <p className="text-primary font-mono-code text-sm mb-4 tracking-wider">
+            {"<Hello World />"}
+          </p>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">
             I'm <span className="gradient-text">Maaz Iqbal</span>
           </h1>
@@ -33,14 +38,17 @@ const HeroSection = () => {
           <p className="mt-5 text-muted-foreground max-w-lg text-sm md:text-base">
             Building scalable, modern, and user-focused web applications
           </p>
-          <div className="mt-7 flex flex-wrap gap-3 justify-center md:justify-start">
-            <a href="#projects" className="btn-glow text-primary-foreground text-sm">
+          <div className="mt-7 flex flex-wrap gap-3 justify-center md:justify-start mb-8 sm:mb-0">
+            <a
+              href="#projects"
+              className="btn-glow text-primary-foreground text-sm"
+            >
               View Projects
             </a>
             <a
-              href="/Maaz_Iqbal_CV.pdf"
+              href="/maaz-cv.pdf"
               download
-              className="btn-outline-glow text-sm flex items-center gap-2"
+              className="btn-outline-glow text-sm items-center gap-2 hidden sm:inline-flex"
             >
               <Download size={16} /> Download CV
             </a>
@@ -56,10 +64,17 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="relative"
         >
-          <div className="relative w-52 h-52 md:w-64 md:h-64 animate-float">
+          <div className="relative w-52 h-52 md:w-72 md:h-72 lg:w-96 lg:h-96 animate-float">
+            {" "}
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-accent/30 blur-2xl" />
             <div className="relative rounded-full overflow-hidden border-2 border-primary/30 w-full h-full">
-              <img src={profileImg} alt="Maaz Iqbal" className="w-full h-full object-cover" width={512} height={512} />
+              <img
+                src="/maaz-folio.png"
+                alt="Maaz Iqbal"
+                className="w-full h-full object-cover"
+                width={512}
+                height={512}
+              />
             </div>
           </div>
         </motion.div>
