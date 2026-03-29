@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import HeroScene from "./HeroScene";
 import TypingText from "./TypingText";
-import profileImg from "@/assets/profile.jpg";
 import { Download, ArrowDown } from "lucide-react";
 
 const HeroSection = () => {

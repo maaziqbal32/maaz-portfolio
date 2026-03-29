@@ -35,9 +35,10 @@ const ExperienceSection = () => (
         {experiences.map((exp, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      
             transition={{ duration: 0.6 }}
             className={`relative pl-12 md:pl-0 mb-12 ${
               i % 2 === 0 ? "md:pr-[55%]" : "md:pl-[55%]"

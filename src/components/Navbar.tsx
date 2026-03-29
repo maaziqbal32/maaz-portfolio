@@ -43,7 +43,7 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-18">
-        <a href="#" className="text-xl font-bold gradient-text">MI</a>
+        <a href="#" className="text-xl font-bold gradient-text">{"< Maaz Iqbal />"}</a>
 
         <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
