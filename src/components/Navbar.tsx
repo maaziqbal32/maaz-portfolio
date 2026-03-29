@@ -17,23 +17,31 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  const scrollToSection = (href: string) => {
-    const id = href.replace(/^#/, "");
-    const section = document.getElementById(id);
-    if (!section) return;
+const scrollToSection = (href: string) => {
+  const id = href.replace(/^#/, "");
+  const section = document.getElementById(id);
+  if (!section) return;
 
-    const navHeight = 80; // adjust based on navbar height
-    const targetTop = section.getBoundingClientRect().top + window.pageYOffset - navHeight;
+  const navEl = document.querySelector("nav");
+  const navHeight = navEl ? navEl.clientHeight : 80;
 
-    window.scrollTo({ top: targetTop, behavior: "smooth" });
-    setActiveSection(id);
-    window.history.replaceState(null, "", `#${id}`);
-  };
+  const top = section.getBoundingClientRect().top + window.pageYOffset - navHeight;
+  window.scrollTo({ top, behavior: "smooth" });
+
+  setActiveSection(id);
+  window.history.replaceState(null, "", `#${id}`);
+};
 
   const handleNavLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     event.preventDefault();
-    scrollToSection(href);
-    if (mobileOpen) setMobileOpen(false);
+    const targetScroll = () => scrollToSection(href);
+
+    if (mobileOpen) {
+      setMobileOpen(false);
+      window.setTimeout(targetScroll, 100);
+    } else {
+      targetScroll();
+    }
   };
 
   useEffect(() => {
