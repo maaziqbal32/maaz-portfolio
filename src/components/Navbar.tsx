@@ -17,6 +17,25 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
+  const scrollToSection = (href: string) => {
+    const id = href.replace(/^#/, "");
+    const section = document.getElementById(id);
+    if (!section) return;
+
+    const navHeight = 80; // adjust based on navbar height
+    const targetTop = section.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
+    window.scrollTo({ top: targetTop, behavior: "smooth" });
+    setActiveSection(id);
+    window.history.replaceState(null, "", `#${id}`);
+  };
+
+  const handleNavLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    event.preventDefault();
+    scrollToSection(href);
+    if (mobileOpen) setMobileOpen(false);
+  };
+
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -50,6 +69,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
+              onClick={(event) => handleNavLinkClick(event, link.href)}
               className={`text-sm font-medium transition-colors duration-300 hover:text-primary ${
                 activeSection === link.href.slice(1)
                   ? "text-primary"
@@ -94,7 +114,7 @@ const Navbar = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(event) => handleNavLinkClick(event, link.href)}
                   className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
                 >
                   {link.label}

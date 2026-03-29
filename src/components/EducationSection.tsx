@@ -7,7 +7,7 @@ const items = [
     icon: GraduationCap,
     title: "BS Computer Science",
     institution: "University of Education, Lahore",
-    period: "2020 – 2024",
+    period: "2021 – 2025",
   },
   {
     icon: Award,
