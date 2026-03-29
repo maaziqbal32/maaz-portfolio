@@ -22,11 +22,19 @@ const scrollToSection = (href: string) => {
   const section = document.getElementById(id);
   if (!section) return;
 
-  const navEl = document.querySelector("nav");
-  const navHeight = navEl ? navEl.clientHeight : 80;
+  const navHeight = document.querySelector("nav")?.offsetHeight || 64;
+  const offset = 4; // small buffer
 
-  const top = section.getBoundingClientRect().top + window.pageYOffset - navHeight;
-  window.scrollTo({ top, behavior: "smooth" });
+  const heading = section.querySelector("h1, h2, h3, h4, h5, h6");
+  const targetElement = heading || section;
+
+  const targetTop =
+    (targetElement as HTMLElement).getBoundingClientRect().top +
+    window.pageYOffset -
+    navHeight -
+    offset;
+
+  window.scrollTo({ top: targetTop, behavior: "smooth" });
 
   setActiveSection(id);
   window.history.replaceState(null, "", `#${id}`);
