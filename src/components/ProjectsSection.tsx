@@ -7,54 +7,85 @@ const projects = [
   {
     title: "CampusGuard AI",
     badge: "Final Year Project",
-    description: "AI-powered campus monitoring system detecting violations (smoking, fighting). Uses camera feeds + Raspberry Pi + e-challan system. Built dashboards using MERN stack for real-time data visualization.",
-    tech: ["React.js", "Node.js", "MongoDB", "Express.js", "Raspberry Pi", "AI/ML"],
+    description:
+      "AI-powered campus monitoring system designed to detect violations such as smoking and fighting using real-time camera feeds. Integrated with Raspberry Pi for edge processing and an automated e-challan system for instant reporting. Developed interactive dashboards using the MERN stack to visualize real-time data, track incidents, and improve campus security management.",
+    tech: [
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "Raspberry Pi",
+      "AI/ML",
+    ],
     github: "#",
     demo: "#",
   },
   {
-    title: "RBEX Ecommerce Website",
-    badge: null,
-    description: "Real-time car spare parts e-commerce platform. Features product browsing, search, and filtering functionality for seamless user experience.",
+    title: "RBEX Ecommerce",
+    description:
+      "Developed a professional e-commerce platform for an international client focused on car spare parts. The application provides a seamless and responsive user experience with advanced product browsing, real-time search, and dynamic filtering capabilities. Emphasis was placed on clean UI design, performance optimization, and intuitive navigation to enhance customer engagement and usability across devices.",
     tech: ["HTML", "Tailwind CSS", "React.js"],
     github: "#",
-    demo: "#",
+    demo: "https://www.rbex.parts/",
   },
   {
     title: "PIA Clone Website",
-    badge: "Personal Project",
-    description: "Airline booking UI clone with focus on clean UI and accessibility. Pixel-perfect recreation of the Pakistan International Airlines booking interface.",
+    description:
+      "A beginner-friendly airline booking UI clone developed to practice clean layout design, responsiveness, and basic accessibility principles. Inspired by the Pakistan International Airlines booking interface, this project helped strengthen my front-end fundamentals.",
     tech: ["HTML", "CSS", "Bootstrap"],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/maaziqbal32/PIA-clone-Website",
+    demo: "https://pia-clone-website.vercel.app/",
   },
   {
     title: "HooBank UI",
-    badge: "Personal Project",
-    description: "Modern banking UI with reusable components and mobile-first design. Clean, responsive interface showcasing modern financial dashboard aesthetics.",
+    description:
+      "Modern banking UI with reusable components and mobile-first design. Clean, responsive interface showcasing modern financial dashboard aesthetics.",
     tech: ["React.js", "Vite", "Tailwind CSS"],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/maaziqbal32/Hoo-Bank",
+    demo: "https://hoo-bank-two-kappa.vercel.app/",
   },
   {
     title: "Personal Portfolio",
-    badge: "Personal Project",
-    description: "Portfolio website fully responsive and optimized for performance. Showcases projects, skills, and professional experience with smooth animations.",
+    description:
+      "Designed and developed a fully responsive personal portfolio website to showcase projects, technical skills, and professional experience. Implemented smooth animations and modern UI/UX principles to create an engaging user experience. Focused on performance optimization, clean code structure, and accessibility to ensure fast loading and seamless interaction across all devices.",
     tech: ["React.js", "Tailwind CSS"],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/maaziqbal32/maaz-portfolio",
+    demo: "https://maaz-portfolio-two.vercel.app/",
   },
   {
-    title: "Pantry App",
-    badge: "Personal Project",
-    description: "Full MERN stack pantry management system with REST APIs. Manage inventory, track expiration dates, and organize pantry items efficiently.",
-    tech: ["React.js", "Express.js", "MongoDB", "Node.js"],
-    github: "#",
-    demo: "#",
+    title: "FrostBite",
+    badge: "",
+    description:
+      "An advanced real-time file builder application featuring a drag-and-drop interface for dynamic configuration. Includes a live console for tracking build progress and system logs. Focused on creating a highly interactive UI with efficient state management and seamless user experience.",
+    tech: ["React.js", "Tailwind CSS", "HTML"],
+    github: "https://github.com/maaziqbal32/FrostBite",
+    demo: "https://frost-bite.vercel.app/",
   },
+  {
+    title: "CleaningHub",
+    description:
+      "Developed a modern service-based website for a solar panel and building cleaning business focused on maximizing energy efficiency and maintenance. The platform highlights professional services such as solar panel, window, and building cleaning, emphasizing increased energy output and customer trust. Designed a clean, responsive UI with engaging sections, strong call-to-actions, and smooth user experience to effectively convert visitors into clients.",
+    tech: ["React.js","TypeScript", "Tailwind CSS", "HTML"],
+    github: "https://github.com/maaziqbal32/solar-Cleaning",
+    demo: "https://solar-cleaning-tau.vercel.app/",
+  },
+  {
+  title: "Assignment Hub",
+  description:
+    "Developed a professional academic service platform designed to assist university students with research proposals, assignments, case studies, and dissertations. The website focuses on delivering a clean, trustworthy, and conversion-driven user experience with clear service sections, strong call-to-actions, and easy navigation. Emphasized responsive design, modern UI/UX, and performance optimization to effectively engage users across regions including the UK, Australia, Canada, and the USA.",
+  tech: ["TypeScript","React.js", "Tailwind CSS", "HTML"],
+  github: "https://github.com/maaziqbal32/assignment-hub",
+  demo: "https://assignment-hub-five.vercel.app/",
+},
 ];
 
-const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => {
+const ProjectCard = ({
+  project,
+  index,
+}: {
+  project: (typeof projects)[0];
+  index: number;
+}) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
 
@@ -96,10 +127,15 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
             </span>
           )}
         </div>
-        <p className="text-muted-foreground text-sm leading-relaxed flex-1">{project.description}</p>
+        <p className="text-muted-foreground text-sm leading-relaxed flex-1">
+          {project.description}
+        </p>
         <div className="flex flex-wrap gap-2 mt-4">
           {project.tech.map((t) => (
-            <span key={t} className="text-xs px-2.5 py-1 rounded-full bg-muted text-muted-foreground">
+            <span
+              key={t}
+              className="text-xs px-2.5 py-1 rounded-full bg-muted text-muted-foreground"
+            >
               {t}
             </span>
           ))}

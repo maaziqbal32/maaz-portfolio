@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 import { Trophy, Flame, Medal } from "lucide-react";
 
 const achievements = [
-  { icon: Flame, label: "LeetCode 50 Days Badge", value: 50, suffix: " Days" },
+  { icon: Flame, label: "LeetCode 100 Days Badge", value: 100, suffix: " Days" },
   { icon: Medal, label: "Fellowship Participation", value: 1, suffix: "" },
   { icon: Trophy, label: "Projects Completed", value: 15, suffix: "+" },
 ];
