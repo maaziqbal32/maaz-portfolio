@@ -16,6 +16,7 @@ const categories = [
     skills: [
       { name: "Node.js", level: 85 },
       { name: "Express.js", level: 88 },
+      { name: "Postman", level: 80 },
     ],
   },
   {
@@ -23,6 +24,7 @@ const categories = [
     skills: [
       { name: "MongoDB", level: 85 },
       { name: "Firebase", level: 72 },
+      { name: "MySQL", level: 80 },
     ],
   },
   {

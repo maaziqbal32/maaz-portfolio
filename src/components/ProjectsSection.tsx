@@ -5,6 +5,22 @@ import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
+    title: "LinkFlow",
+    badge: "Full Stack Project",
+    description:
+      "Developed a full-stack URL shortening application that allows users to transform long URLs into short, shareable links. Built the frontend using Next.js and React.js, with a Node.js and Express.js backend to handle URL processing and API requests. Integrated MongoDB with Mongoose for storing and managing shortened URLs, focusing on a clean user interface and efficient link management.",
+    tech: [
+      "Next.js",
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+    ],
+    github: "https://github.com/maaziqbal32/LinkFlow_frontend",
+    demo: "https://linkflow.app/d9a5a14c",
+  },
+  {
     title: "CampusGuard AI",
     badge: "Final Year Project",
     description:
@@ -65,18 +81,18 @@ const projects = [
     title: "CleaningHub",
     description:
       "Developed a modern service-based website for a solar panel and building cleaning business focused on maximizing energy efficiency and maintenance. The platform highlights professional services such as solar panel, window, and building cleaning, emphasizing increased energy output and customer trust. Designed a clean, responsive UI with engaging sections, strong call-to-actions, and smooth user experience to effectively convert visitors into clients.",
-    tech: ["React.js","TypeScript", "Tailwind CSS", "HTML"],
+    tech: ["React.js", "TypeScript", "Tailwind CSS", "HTML"],
     github: "https://github.com/maaziqbal32/solar-Cleaning",
     demo: "https://solar-cleaning-tau.vercel.app/",
   },
   {
-  title: "Assignment Hub",
-  description:
-    "Developed a professional academic service platform designed to assist university students with research proposals, assignments, case studies, and dissertations. The website focuses on delivering a clean, trustworthy, and conversion-driven user experience with clear service sections, strong call-to-actions, and easy navigation. Emphasized responsive design, modern UI/UX, and performance optimization to effectively engage users across regions including the UK, Australia, Canada, and the USA.",
-  tech: ["TypeScript","React.js", "Tailwind CSS", "HTML"],
-  github: "https://github.com/maaziqbal32/assignment-hub",
-  demo: "https://assignment-hub-five.vercel.app/",
-},
+    title: "Assignment Hub",
+    description:
+      "Developed a professional academic service platform designed to assist university students with research proposals, assignments, case studies, and dissertations. The website focuses on delivering a clean, trustworthy, and conversion-driven user experience with clear service sections, strong call-to-actions, and easy navigation. Emphasized responsive design, modern UI/UX, and performance optimization to effectively engage users across regions including the UK, Australia, Canada, and the USA.",
+    tech: ["TypeScript", "React.js", "Tailwind CSS", "HTML"],
+    github: "https://github.com/maaziqbal32/assignment-hub",
+    demo: "https://assignment-hub-five.vercel.app/",
+  },
 ];
 
 const ProjectCard = ({

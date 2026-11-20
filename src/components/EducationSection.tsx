@@ -5,6 +5,12 @@ import { GraduationCap, Award } from "lucide-react";
 const items = [
   {
     icon: GraduationCap,
+    title: "MS Computer Technology",
+    institution: "Beijing University of Posts and Telecommunicatons, China",
+    period: "2026 – 2028",
+  },
+  {
+    icon: GraduationCap,
     title: "BS Computer Science",
     institution: "University of Education, Lahore",
     period: "2021 – 2025",
