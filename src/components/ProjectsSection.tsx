@@ -18,7 +18,7 @@ const projects = [
       "Mongoose",
     ],
     github: "https://github.com/maaziqbal32/LinkFlow_frontend",
-    demo: "https://linkflow.app/d9a5a14c",
+    demo: "https://link-flow-frontend.vercel.app/",
   },
   {
     title: "CampusGuard AI",
