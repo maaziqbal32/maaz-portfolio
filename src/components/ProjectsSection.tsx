@@ -86,7 +86,7 @@ const projects = [
     demo: "https://solar-cleaning-tau.vercel.app/",
   },
   {
-    title: "Assignment Hub",
+    title: "Assignment Hub System",
     description:
       "Developed a professional academic service platform designed to assist university students with research proposals, assignments, case studies, and dissertations. The website focuses on delivering a clean, trustworthy, and conversion-driven user experience with clear service sections, strong call-to-actions, and easy navigation. Emphasized responsive design, modern UI/UX, and performance optimization to effectively engage users across regions including the UK, Australia, Canada, and the USA.",
     tech: ["TypeScript", "React.js", "Tailwind CSS", "HTML"],
