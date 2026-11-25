@@ -78,7 +78,7 @@ const projects = [
     demo: "https://frost-bite.vercel.app/",
   },
   {
-    title: "CleaningHub",
+    title: "CleaningHub ",
     description:
       "Developed a modern service-based website for a solar panel and building cleaning business focused on maximizing energy efficiency and maintenance. The platform highlights professional services such as solar panel, window, and building cleaning, emphasizing increased energy output and customer trust. Designed a clean, responsive UI with engaging sections, strong call-to-actions, and smooth user experience to effectively convert visitors into clients.",
     tech: ["React.js", "TypeScript", "Tailwind CSS", "HTML"],
